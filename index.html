@@ -1,1 +1,125 @@
-teste
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dra. Renata dos Anjos - Agende sua avaliação</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet" />
+
+    <style>
+        @property --btn-angle {
+            syntax: "<angle>";
+            inherits: false;
+            initial-value: 135deg;
+        }
+
+        :root {
+            --text-white: #ffffff;
+            --bg-soft: #f7f3ee;
+            --btn-color-start: #b4946e;
+            --btn-color-end: #a0988d;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: "Montserrat", sans-serif;
+            background: radial-gradient(circle at top, #fffaf3 0%, var(--bg-soft) 60%, #efe8df 100%);
+            padding: 32px;
+        }
+
+        main {
+            width: 100%;
+            max-width: 420px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 24px;
+            text-align: center;
+        }
+
+        .logo-icon {
+            width: min(38%, 130px);
+            height: auto;
+            display: block;
+            margin-bottom: 16px;
+        }
+
+        .logo-wordmark {
+            width: min(100%, 360px);
+            height: auto;
+            display: block;
+            margin-bottom: 60px;
+        }
+
+        .cta {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: min(100%, 320px);
+            min-height: 54px;
+            padding: 15px 32px;
+            border: 0;
+            border-radius: 999px;
+            --btn-angle: 135deg;
+            background: linear-gradient(var(--btn-angle), var(--btn-color-start), var(--btn-color-end));
+            background-size: 200% 200%;
+            background-position: 0% 50%;
+            color: var(--text-white);
+            text-decoration: none;
+            font-size: clamp(0.95rem, 3vw, 1rem);
+            font-weight: 700;
+            box-shadow: 0 10px 24px rgba(44, 39, 37, 0.24);
+            transition: transform 0.2s ease, box-shadow 0.2s ease, filter 0.2s ease,
+                --btn-angle 0.35s ease, background-position 0.35s ease;
+        }
+
+        .cta:hover {
+            --btn-angle: 215deg;
+            background-position: 100% 50%;
+            transform: translateY(-2px);
+            box-shadow: 0 14px 30px rgba(44, 39, 37, 0.28);
+            filter: brightness(1.03);
+        }
+
+        .cta:active {
+            transform: translateY(0);
+        }
+
+        @media only screen and (max-width:767px) {
+            .cta {
+                width: fit-content;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <img class="logo-icon" src="./logo/logo-dra-renata-dos-anjos.svg" alt="Icone da logo Dra Renata dos Anjos" />
+        <img class="logo-wordmark" src="./logo/logo-dra-renata-dos-anjos-2.svg"
+            alt="Logo escrita Dra Renata dos Anjos" />
+
+        <a class="cta"
+            href="https://api.whatsapp.com/send/?phone=554688022986&text=Ol%C3%A1%2C+venho+do+site+e+gostaria+de+agendar+minha+avalia%C3%A7%C3%A3o"
+            target="_blank" rel="noopener noreferrer">
+            Agende sua avaliação
+        </a>
+    </main>
+</body>
+
+</html>
