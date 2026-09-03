@@ -1621,7 +1621,7 @@ section[id] {
 @media (max-width: 43.6875rem) {
   .hero__copy,
   .hero h1 {
-    max-width: 90vw;
+    max-width: 95vw;
   }
 
   .hero h1 {
