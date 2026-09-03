@@ -1,129 +1,869 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-BR">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#5b4336">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
 
-<head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description"
-        content="Consultório da Dra. Renata dos Anjos especializado em estética facial, com atendimentos personalizados, seguros e focados em realçar a beleza natural e o bem-estar." />
-    <link rel="icon" type="image/png" href="./logo/favicon.png" />
-    <title>Dra. Renata dos Anjos - Agende sua avaliação</title>
+    <title>Dra. Renata dos Anjos | Harmonização Facial em Pato Branco</title>
+    <meta
+      name="description"
+      content="Dra. Renata dos Anjos, Biomédica Esteta em Pato Branco: Botox, perfiloplastia, microagulhamento, peeling e limpeza de pele com avaliação individual."
+    >
+    <meta name="author" content="Dra. Renata dos Anjos">
+    <meta name="google-site-verification" content="Y-8C_-cGuZkO1VqSu5PKP3pddaM6gukcj2JCWJFIQ7s">
+    <meta name="msvalidate.01" content="E116AD38AA8AD043870F777415D29B9B">
+    <link rel="canonical" href="https://drarenatadosanjos.com.br/">
 
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
-        rel="stylesheet" />
+    <meta property="og:locale" content="pt_BR">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Dra. Renata dos Anjos">
+    <meta property="og:title" content="Dra. Renata dos Anjos | Harmonização Facial em Pato Branco">
+    <meta
+      property="og:description"
+      content="Botox, perfiloplastia, microagulhamento, peeling e limpeza de pele em Pato Branco, com avaliação individual e foco em naturalidade."
+    >
+    <meta property="og:url" content="https://drarenatadosanjos.com.br/">
+    <meta property="og:image" content="https://drarenatadosanjos.com.br/assets/images/og-renata.webp">
+    <meta property="og:image:type" content="image/webp">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Retrato da Dra. Renata dos Anjos ao lado de sua marca e da identificação Biomédica Esteta">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Dra. Renata dos Anjos | Harmonização Facial em Pato Branco">
+    <meta
+      name="twitter:description"
+      content="Botox, perfiloplastia, microagulhamento, peeling e limpeza de pele em Pato Branco, com avaliação individual e foco em naturalidade."
+    >
+    <meta name="twitter:image" content="https://drarenatadosanjos.com.br/assets/images/og-renata.webp">
+    <meta name="twitter:image:alt" content="Retrato da Dra. Renata dos Anjos ao lado de sua marca e da identificação Biomédica Esteta">
 
-    <style>
-        @property --btn-angle {
-            syntax: "<angle>";
-            inherits: false;
-            initial-value: 135deg;
-        }
+    <link rel="icon" href="assets/brand/logo-icon.svg" type="image/svg+xml">
+    <link
+      rel="preload"
+      href="assets/fonts/montserrat-variable.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    >
+    <link rel="preload" href="assets/images/clinica-dra-renata-dos-anjos.webp" as="image" type="image/webp" fetchpriority="high">
+    <link rel="preload" href="assets/images/Dra-Renata-dos-Anjos.webp" as="image" type="image/webp" fetchpriority="high">
+    <link rel="stylesheet" href="styles.css">
+    <!-- O GTM-PK2P5VGX é carregado por consent.js somente após o aceite. -->
+    <script src="consent.js" defer></script>
+    <script src="script.js" defer></script>
 
-        :root {
-            --text-white: #ffffff;
-            --bg-soft: #f7f3ee;
-            --btn-color-start: #b4946e;
-            --btn-color-end: #a0988d;
-        }
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-family: "Montserrat", sans-serif;
-            background: radial-gradient(circle at top, #fffaf3 0%, var(--bg-soft) 60%, #efe8df 100%);
-            padding: 32px;
-        }
-
-        main {
-            width: 100%;
-            max-width: 420px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            gap: 24px;
-            text-align: center;
-        }
-
-        .logo-icon {
-            width: min(38%, 130px);
-            height: auto;
-            display: block;
-            margin-bottom: 16px;
-        }
-
-        .logo-wordmark {
-            width: min(100%, 360px);
-            height: auto;
-            display: block;
-            margin-bottom: 60px;
-        }
-
-        .cta {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            width: min(100%, 320px);
-            min-height: 54px;
-            padding: 15px 32px;
-            border: 0;
-            border-radius: 999px;
-            --btn-angle: 135deg;
-            background: linear-gradient(var(--btn-angle), var(--btn-color-start), var(--btn-color-end));
-            background-size: 200% 200%;
-            background-position: 0% 50%;
-            color: var(--text-white);
-            text-decoration: none;
-            font-size: clamp(0.95rem, 3vw, 1rem);
-            font-weight: 600;
-            text-transform: uppercase;
-            box-shadow: 0 10px 24px rgba(44, 39, 37, 0.24);
-            transition: transform 0.2s ease, box-shadow 0.2s ease, filter 0.2s ease,
-                --btn-angle 0.35s ease, background-position 0.35s ease;
-        }
-
-        .cta:hover {
-            --btn-angle: 215deg;
-            background-position: 100% 50%;
-            transform: translateY(-2px);
-            box-shadow: 0 14px 30px rgba(44, 39, 37, 0.28);
-            filter: brightness(1.03);
-        }
-
-        .cta:active {
-            transform: translateY(0);
-        }
-
-        @media only screen and (max-width:767px) {
-            .cta {
-                width: fit-content;
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "Person",
+            "@id": "https://drarenatadosanjos.com.br/#renata",
+            "name": "Dra. Renata dos Anjos",
+            "honorificPrefix": "Dra.",
+            "jobTitle": "Biomédica Esteta",
+            "description": "Biomédica Esteta com atuação focada em Harmonização Facial, pós-graduada em Cosmetologia e Estética e pós-graduanda em Estética Avançada.",
+            "url": "https://drarenatadosanjos.com.br/",
+            "image": {
+              "@id": "https://drarenatadosanjos.com.br/#foto-renata"
+            },
+            "mainEntityOfPage": {
+              "@id": "https://drarenatadosanjos.com.br/#webpage"
+            },
+            "telephone": "+55 46 98802-2986",
+            "identifier": {
+              "@type": "PropertyValue",
+              "propertyID": "CRBM-6",
+              "value": "9246"
+            },
+            "hasCredential": [
+              {
+                "@type": "EducationalOccupationalCredential",
+                "credentialCategory": "Habilitação profissional",
+                "name": "Habilitação em Biomedicina Estética"
+              },
+              {
+                "@type": "EducationalOccupationalCredential",
+                "credentialCategory": "Pós-graduação",
+                "name": "Pós-graduação em Cosmetologia e Estética"
+              }
+            ],
+            "knowsAbout": [
+              "Harmonização facial",
+              "Toxina botulínica (Botox)",
+              "Perfiloplastia",
+              "Preenchimento facial",
+              "Microagulhamento",
+              "Peeling",
+              "Limpeza de pele"
+            ],
+            "sameAs": [
+              "https://www.instagram.com/drarenataanjos",
+              "https://maps.app.goo.gl/s66ffQioBQjr7ysE6"
+            ],
+            "workLocation": {
+              "@id": "https://drarenatadosanjos.com.br/#local-atendimento"
             }
-        }
-    </style>
-</head>
+          },
+          {
+            "@type": "Place",
+            "@id": "https://drarenatadosanjos.com.br/#local-atendimento",
+            "name": "Local de atendimento da Dra. Renata dos Anjos",
+            "description": "Atendimento de segunda a sábado, das 08:00 às 18:00, mediante agendamento e disponibilidade.",
+            "hasMap": "https://maps.app.goo.gl/s66ffQioBQjr7ysE6",
+            "address": {
+              "@type": "PostalAddress",
+              "streetAddress": "R. Dr. Francisco Beltrão, 129 - Santa Terezinha",
+              "addressLocality": "Pato Branco",
+              "addressRegion": "PR",
+              "postalCode": "85501-190",
+              "addressCountry": "BR"
+            },
+            "openingHoursSpecification": {
+              "@type": "OpeningHoursSpecification",
+              "dayOfWeek": [
+                "https://schema.org/Monday",
+                "https://schema.org/Tuesday",
+                "https://schema.org/Wednesday",
+                "https://schema.org/Thursday",
+                "https://schema.org/Friday",
+                "https://schema.org/Saturday"
+              ],
+              "opens": "08:00",
+              "closes": "18:00"
+            }
+          },
+          {
+            "@type": "ImageObject",
+            "@id": "https://drarenatadosanjos.com.br/#foto-renata",
+            "contentUrl": "https://drarenatadosanjos.com.br/assets/images/Dra-Renata-dos-Anjos.webp",
+            "width": 1024,
+            "height": 1080
+          },
+          {
+            "@type": "WebSite",
+            "@id": "https://drarenatadosanjos.com.br/#website",
+            "url": "https://drarenatadosanjos.com.br/",
+            "name": "Dra. Renata dos Anjos",
+            "description": "Site profissional da Dra. Renata dos Anjos, Biomédica Esteta em Pato Branco.",
+            "inLanguage": "pt-BR",
+            "publisher": {
+              "@id": "https://drarenatadosanjos.com.br/#renata"
+            }
+          },
+          {
+            "@type": "WebPage",
+            "@id": "https://drarenatadosanjos.com.br/#webpage",
+            "url": "https://drarenatadosanjos.com.br/",
+            "name": "Dra. Renata dos Anjos | Harmonização Facial em Pato Branco",
+            "description": "Dra. Renata dos Anjos, Biomédica Esteta em Pato Branco: Botox, perfiloplastia, microagulhamento, peeling e limpeza de pele com avaliação individual.",
+            "inLanguage": "pt-BR",
+            "isPartOf": {
+              "@id": "https://drarenatadosanjos.com.br/#website"
+            },
+            "about": {
+              "@id": "https://drarenatadosanjos.com.br/#renata"
+            },
+            "mainEntity": {
+              "@id": "https://drarenatadosanjos.com.br/#renata"
+            },
+            "primaryImageOfPage": {
+              "@id": "https://drarenatadosanjos.com.br/#foto-renata"
+            },
+            "mentions": [
+              { "@id": "https://drarenatadosanjos.com.br/#servico-botox" },
+              { "@id": "https://drarenatadosanjos.com.br/#servico-perfiloplastia" },
+              { "@id": "https://drarenatadosanjos.com.br/#servico-microagulhamento-peeling" },
+              { "@id": "https://drarenatadosanjos.com.br/#servico-limpeza-pele" }
+            ]
+          },
+          {
+            "@type": "Service",
+            "@id": "https://drarenatadosanjos.com.br/#servico-botox",
+            "url": "https://drarenatadosanjos.com.br/#botox",
+            "name": "Toxina botulínica (Botox)",
+            "serviceType": "Harmonização facial",
+            "description": "Tratamento individualizado que considera a musculatura, os traços e as necessidades de cada paciente, buscando suavizar marcas, equilibrar movimentos e preservar a expressão facial.",
+            "provider": { "@id": "https://drarenatadosanjos.com.br/#renata" },
+            "areaServed": { "@type": "City", "name": "Pato Branco" }
+          },
+          {
+            "@type": "Service",
+            "@id": "https://drarenatadosanjos.com.br/#servico-perfiloplastia",
+            "url": "https://drarenatadosanjos.com.br/#preenchimento",
+            "name": "Perfiloplastia",
+            "alternateName": "Preenchimento",
+            "serviceType": "Harmonização facial",
+            "description": "Planejamento personalizado para harmonizar o perfil facial, considerando as proporções entre nariz, lábios e queixo e respeitando as características e os objetivos individuais.",
+            "provider": { "@id": "https://drarenatadosanjos.com.br/#renata" },
+            "areaServed": { "@type": "City", "name": "Pato Branco" }
+          },
+          {
+            "@type": "Service",
+            "@id": "https://drarenatadosanjos.com.br/#servico-microagulhamento-peeling",
+            "url": "https://drarenatadosanjos.com.br/#microagulhamento-peeling",
+            "name": "Microagulhamento e Peeling",
+            "serviceType": "Cuidados estéticos da pele",
+            "description": "Tratamentos voltados à qualidade e à aparência da pele, escolhidos após avaliação individual das necessidades e do momento de cada paciente.",
+            "provider": { "@id": "https://drarenatadosanjos.com.br/#renata" },
+            "areaServed": { "@type": "City", "name": "Pato Branco" }
+          },
+          {
+            "@type": "Service",
+            "@id": "https://drarenatadosanjos.com.br/#servico-limpeza-pele",
+            "url": "https://drarenatadosanjos.com.br/#limpeza-de-pele",
+            "name": "Limpeza de pele",
+            "serviceType": "Cuidados estéticos da pele",
+            "description": "Cuidado individualizado voltado à remoção de impurezas e cravos, realizado de acordo com as características e necessidades da pele.",
+            "provider": { "@id": "https://drarenatadosanjos.com.br/#renata" },
+            "areaServed": { "@type": "City", "name": "Pato Branco" }
+          },
+          {
+            "@type": "FAQPage",
+            "@id": "https://drarenatadosanjos.com.br/#faq",
+            "url": "https://drarenatadosanjos.com.br/#duvidas",
+            "name": "Dúvidas frequentes sobre o atendimento",
+            "inLanguage": "pt-BR",
+            "isPartOf": {
+              "@id": "https://drarenatadosanjos.com.br/#webpage"
+            },
+            "about": {
+              "@id": "https://drarenatadosanjos.com.br/#renata"
+            },
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "Como funciona a avaliação?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Antes de qualquer procedimento, realizo uma avaliação inicial sem custo. Esse é o momento de entender o que incomoda você, avaliar sua pele e seus traços e conversar sobre as possibilidades para o seu caso. Também explico os cuidados, riscos e limites de cada tratamento. E, se um procedimento não for indicado para você, vou dizer isso com clareza."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "O que acontece depois do procedimento?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Meu cuidado continua após o atendimento. Acompanho sua evolução e permaneço disponível para orientar os cuidados necessários e esclarecer dúvidas durante o período de recuperação."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Para quem é esse cuidado?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Para quem busca cuidar da aparência sem deixar de se reconhecer. Para quem valoriza uma avaliação individual, resultados equilibrados e quer compreender as possibilidades antes de decidir por um procedimento. Também é para quem já teve uma experiência que não saiu como esperava e procura um atendimento cuidadoso para avaliar seu caso."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Já fiz um procedimento e não gostei. E agora?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "O primeiro passo é entender o que foi realizado, o que está incomodando você e como está o seu caso atualmente. Durante a avaliação, você poderá me contar sua experiência e esclarecer suas dúvidas. A partir disso, avalio quais possibilidades existem e se há indicação para algum tipo de tratamento. Nenhuma correção é prometida antes de uma avaliação individual."
+                }
+              }
+            ]
+          }
+        ]
+      }
+    </script>
+  </head>
 
-<body>
-    <main>
-        <img class="logo-icon" src="./logo/logo-dra-renata-dos-anjos.svg" alt="Icone da logo Dra Renata dos Anjos" />
-        <img class="logo-wordmark" src="./logo/logo-dra-renata-dos-anjos-2.svg"
-            alt="Logo escrita Dra Renata dos Anjos" />
+  <body>
+    <!-- Sem JavaScript não há como registrar consentimento; por isso o iframe noscript do GTM é intencionalmente omitido. -->
+    <a class="skip-link" href="#conteudo">Ir para o conteúdo</a>
 
-        <a class="cta"
-            href="https://api.whatsapp.com/send/?phone=554688022986&text=Ol%C3%A1%2C+gostaria+de+agendar+minha+avalia%C3%A7%C3%A3o!"
-            target="_blank" rel="noopener noreferrer">
-            Agende sua avaliação
-        </a>
+    <header class="hero" aria-labelledby="titulo-principal">
+      <div class="hero__background" aria-hidden="true">
+        <img
+          src="assets/images/clinica-dra-renata-dos-anjos.webp"
+          width="1672"
+          height="941"
+          alt=""
+          fetchpriority="high"
+        >
+      </div>
+
+      <div class="hero__arc" aria-hidden="true"></div>
+
+      <img
+        class="hero__portrait"
+        src="assets/images/Dra-Renata-dos-Anjos.webp"
+        width="1024"
+        height="1080"
+        alt="Retrato da Dra. Renata dos Anjos, Biomédica Esteta"
+        fetchpriority="high"
+        decoding="async"
+      >
+
+      <div class="container hero__content">
+        <div class="hero__copy">
+          <img
+            class="hero__brand-icon"
+            src="assets/brand/logo-icon.svg"
+            width="1120"
+            height="1054"
+            alt=""
+            aria-hidden="true"
+          >
+          <p class="hero__eyebrow">Biomédica Esteta <span aria-hidden="true">•</span> CRBM 9246</p>
+          <h1 id="titulo-principal">
+            Resultado que te deixa <span class="hero__highlight">mais confiante</span> sem te transformar em outra pessoa!
+          </h1>
+          <a
+            class="button hero__button"
+            href="https://api.whatsapp.com/send/?phone=554688022986&amp;text=Ol%C3%A1%2C%20Dra.%20Renata!%20Conheci%20seu%20site%20e%20gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o."
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Agendar uma avaliação sem custo com a Dra. Renata pelo WhatsApp"
+          >
+            Agendar avaliação
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <main id="conteudo">
+      <section class="about section" id="sobre" aria-labelledby="titulo-sobre">
+        <div class="container about__layout">
+          <div class="about__copy">
+            <p class="eyebrow">Quem sou eu?</p>
+            <h2 class="about__title" id="titulo-sobre">
+              <span class="about__name">Dra. Renata dos Anjos</span>
+              <span class="about__role">Biomédica Esteta</span>
+            </h2>
+            <p>
+              Sou a Dra. Renata dos Anjos, Biomédica Esteta,
+              pós-graduada em Cosmetologia e Estética e
+              pós-graduanda em Estética Avançada, com atuação focada em
+              Harmonização Facial. Antes de indicar qualquer
+              procedimento, <strong class="about__emphasis">busco entender o que incomoda você</strong> e avalio com atenção sua pele, seus
+              traços e suas expectativas.
+            </p>
+            <p>
+              Acredito que cada tratamento precisa ter um propósito. Por isso, meu compromisso é
+              explicar com clareza as possibilidades, os riscos e os limites de cada procedimento.
+              E se algo não fizer sentido para você ou para o seu
+              momento, <strong class="about__emphasis">dizer “não” também faz parte do meu cuidado</strong>.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="service-menu section" aria-labelledby="titulo-servicos">
+        <div class="container">
+          <div class="section-heading section-heading--center">
+            <h2 id="titulo-servicos">Como posso cuidar de você?</h2>
+            <p>
+              Conheça os tratamentos e toque em uma opção para ir diretamente aos detalhes.
+            </p>
+          </div>
+
+          <nav class="service-cards" aria-label="Navegação pelos serviços">
+            <a class="service-card" href="#titulo-botox">
+              <img
+                src="assets/images/card-botox.webp"
+                width="673"
+                height="300"
+                alt=""
+                loading="lazy"
+              >
+              <span class="service-card__shade" aria-hidden="true"></span>
+              <span class="service-card__content">
+                <span class="service-card__title">Botox</span>
+                <span class="service-card__hint">Clique para ver detalhes <span aria-hidden="true">↘</span></span>
+              </span>
+            </a>
+
+            <a class="service-card" href="#titulo-preenchimento">
+              <img
+                src="assets/images/card-preenchimento.webp"
+                width="673"
+                height="300"
+                alt=""
+                loading="lazy"
+              >
+              <span class="service-card__shade" aria-hidden="true"></span>
+              <span class="service-card__content">
+                <span class="service-card__title">Preenchimento</span>
+                <span class="service-card__hint">Clique para ver detalhes <span aria-hidden="true">↘</span></span>
+              </span>
+            </a>
+
+            <a class="service-card" href="#titulo-microagulhamento">
+              <img
+                src="assets/images/card-microagulhamento.webp"
+                width="673"
+                height="300"
+                alt=""
+                loading="lazy"
+              >
+              <span class="service-card__shade" aria-hidden="true"></span>
+              <span class="service-card__content">
+                <span class="service-card__title">Microagulhamento e Peeling</span>
+                <span class="service-card__hint">Clique para ver detalhes <span aria-hidden="true">↘</span></span>
+              </span>
+            </a>
+
+            <a class="service-card" href="#titulo-limpeza">
+              <img
+                src="assets/images/card-limpeza.webp"
+                width="673"
+                height="300"
+                alt=""
+                loading="lazy"
+              >
+              <span class="service-card__shade" aria-hidden="true"></span>
+              <span class="service-card__content">
+                <span class="service-card__title">Limpeza de pele</span>
+                <span class="service-card__hint">Clique para ver detalhes <span aria-hidden="true">↘</span></span>
+              </span>
+            </a>
+          </nav>
+        </div>
+      </section>
+
+      <section class="treatment section" id="botox" aria-labelledby="titulo-botox">
+        <div class="container treatment__inner">
+          <header class="section-heading">
+            <h2 id="titulo-botox">Toxina botulínica <span>(Botox)</span></h2>
+            <p>
+              A toxina botulínica atua relaxando temporariamente músculos responsáveis pelas linhas
+              de expressão e por determinados movimentos do rosto.
+            </p>
+            <p>
+              O tratamento é planejado de forma individualizada, considerando a musculatura, os
+              traços e as necessidades de cada paciente, buscando suavizar marcas, equilibrar
+              movimentos e preservar a expressão facial.
+            </p>
+          </header>
+
+          <div class="comparison" role="group" aria-label="Comparação do resultado do tratamento com Botox">
+            <figure class="result-card">
+              <img
+                src="assets/images/botox-antes.webp"
+                width="1000"
+                height="1000"
+                alt="Região da testa e entre as sobrancelhas de uma paciente antes da aplicação de toxina botulínica"
+                loading="lazy"
+                decoding="async"
+              >
+              <figcaption class="result-card__label">Antes</figcaption>
+            </figure>
+
+            <figure class="result-card">
+              <img
+                src="assets/images/botox-depois.webp"
+                width="1000"
+                height="1000"
+                alt="Região da testa e entre as sobrancelhas da mesma paciente depois da aplicação de toxina botulínica"
+                loading="lazy"
+                decoding="async"
+              >
+              <figcaption class="result-card__label">Depois</figcaption>
+            </figure>
+          </div>
+
+          <p class="provisional-note">
+            *Imagens reais com autorização para divulgação.
+          </p>
+
+          <a
+            class="button"
+            href="https://api.whatsapp.com/send/?phone=554688022986&amp;text=Ol%C3%A1%2C%20Dra.%20Renata!%20Conheci%20seu%20site%20e%20gostaria%20de%20saber%20mais%20sobre%20toxina%20botul%C3%ADnica%20(Botox)."
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Conversar com a Dra. Renata no WhatsApp sobre Botox"
+          >
+            <span class="button__label--mobile">Quero saber mais</span>
+            <span class="button__label--desktop">Quero saber mais sobre Botox</span>
+          </a>
+        </div>
+      </section>
+
+      <section class="treatment treatment--warm section" id="preenchimento" aria-labelledby="titulo-preenchimento">
+        <div class="container treatment__inner">
+          <header class="section-heading">
+            <h2 id="titulo-preenchimento">Perfiloplastia</h2>
+            <p>
+              A perfiloplastia busca harmonizar o perfil facial por meio de um planejamento
+              personalizado, considerando as proporções entre nariz, lábios e queixo. Cada indicação
+              respeita a estrutura, as características e os objetivos individuais de cada paciente.
+            </p>
+          </header>
+
+          <div class="comparison" role="group" aria-label="Comparação do resultado de perfiloplastia">
+            <figure class="result-card">
+              <img
+                src="assets/images/Perfiloplastia-antes.webp"
+                width="1000"
+                height="1000"
+                alt="Perfil lateral de uma paciente antes da perfiloplastia, mostrando nariz, lábios e queixo"
+                loading="lazy"
+                decoding="async"
+              >
+              <figcaption class="result-card__label">Antes</figcaption>
+            </figure>
+
+            <figure class="result-card">
+              <img
+                src="assets/images/Perfiloplastia-depois.webp"
+                width="1000"
+                height="1000"
+                alt="Perfil lateral da mesma paciente depois da perfiloplastia, mostrando nariz, lábios e queixo"
+                loading="lazy"
+                decoding="async"
+              >
+              <figcaption class="result-card__label">Depois</figcaption>
+            </figure>
+          </div>
+
+          <p class="provisional-note">
+            *Imagens reais com autorização para divulgação.
+          </p>
+
+          <a
+            class="button"
+            href="https://api.whatsapp.com/send/?phone=554688022986&amp;text=Ol%C3%A1%2C%20Dra.%20Renata!%20Conheci%20seu%20site%20e%20gostaria%20de%20saber%20mais%20sobre%20perfiloplastia."
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Conversar com a Dra. Renata no WhatsApp sobre perfiloplastia"
+          >
+            <span class="button__label--mobile">Quero saber mais</span>
+            <span class="button__label--desktop">Quero saber mais sobre Perfiloplastia</span>
+          </a>
+        </div>
+      </section>
+
+      <section
+        class="treatment treatment--dark section"
+        id="microagulhamento-peeling"
+        aria-labelledby="titulo-microagulhamento"
+      >
+        <div class="container treatment__inner">
+          <header class="section-heading">
+            <h2 id="titulo-microagulhamento">Microagulhamento e Peeling</h2>
+            <p>
+              Tratamentos voltados para melhorar a qualidade e a aparência da pele, podendo auxiliar
+              em queixas como manchas, textura irregular, poros aparentes e sinais do envelhecimento.
+            </p>
+            <p>
+              A escolha do procedimento e do protocolo é feita após a avaliação da pele, considerando
+              suas necessidades e o momento de cada paciente. Antes de qualquer indicação, explico as
+              possibilidades, os cuidados e os limites de cada tratamento.
+            </p>
+          </header>
+
+          <figure class="feature-media">
+            <img
+              src="assets/images/Microagulhamento-e-peeling.webp"
+              width="1254"
+              height="1254"
+              alt="Caneta de microagulhamento aplicada na testa de uma paciente"
+              loading="lazy"
+              decoding="async"
+            >
+          </figure>
+
+          <a
+            class="button button--gold"
+            href="https://api.whatsapp.com/send/?phone=554688022986&amp;text=Ol%C3%A1%2C%20Dra.%20Renata!%20Conheci%20seu%20site%20e%20gostaria%20de%20saber%20mais%20sobre%20microagulhamento%20e%20peeling."
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Conversar com a Dra. Renata no WhatsApp sobre microagulhamento e peeling"
+          >
+            <span class="button__label--mobile">Quero saber mais</span>
+            <span class="button__label--desktop">Quero saber mais sobre Microagulhamento e Peeling</span>
+          </a>
+        </div>
+      </section>
+
+      <section class="treatment section" id="limpeza-de-pele" aria-labelledby="titulo-limpeza">
+        <div class="container treatment__inner">
+          <header class="section-heading">
+            <h2 id="titulo-limpeza">Limpeza de pele</h2>
+            <p>
+              A limpeza de pele é um cuidado voltado à remoção de impurezas e cravos, contribuindo
+              para uma pele mais limpa, equilibrada e bem cuidada.
+            </p>
+            <p>
+              Cada atendimento é realizado de acordo com as características e necessidades da sua
+              pele, respeitando o momento atual e orientando também os cuidados necessários para
+              manter os resultados no dia a dia.
+            </p>
+          </header>
+
+          <figure class="feature-media">
+            <img
+              src="assets/images/Limpeza-de-pele.webp"
+              width="1254"
+              height="1254"
+              alt="Profissional realizando limpeza de pele no rosto de uma paciente"
+              loading="lazy"
+              decoding="async"
+            >
+          </figure>
+
+          <a
+            class="button"
+            href="https://api.whatsapp.com/send/?phone=554688022986&amp;text=Ol%C3%A1%2C%20Dra.%20Renata!%20Conheci%20seu%20site%20e%20gostaria%20de%20saber%20mais%20sobre%20limpeza%20de%20pele."
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Conversar com a Dra. Renata no WhatsApp sobre limpeza de pele"
+          >
+            <span class="button__label--mobile">Quero saber mais</span>
+            <span class="button__label--desktop">Quero saber mais sobre Limpeza de pele</span>
+          </a>
+        </div>
+      </section>
+
+      <section class="testimonials section" id="depoimentos" aria-labelledby="titulo-depoimentos">
+        <div class="container testimonials__inner">
+          <header class="section-heading section-heading--center">
+            <h2 id="titulo-depoimentos">O que dizem as minhas pacientes</h2>
+            <p>Veja o que pacientes que já passaram por aqui têm a dizer sobre o cuidado recebido.</p>
+          </header>
+
+          <div class="testimonials__messages" role="group" aria-label="Depoimentos de pacientes">
+            <img
+              class="testimonial-message"
+              src="assets/images/Depoimento-01.webp"
+              width="589"
+              height="204"
+              alt="Depoimento de paciente: Rê, eu amei o resultado! Ficou exatamente como eu queria, super delicado. Obrigada por todo cuidado."
+              loading="lazy"
+              decoding="async"
+            >
+            <img
+              class="testimonial-message"
+              src="assets/images/Depoimento-02.webp"
+              width="589"
+              height="427"
+              alt="Depoimento de paciente: Dra., precisava vir te agradecer pelo atendimento e pelo resultado. Eu estava com bastante receio antes de fazer, principalmente porque tinha medo de ficar exagerado. Mas desde a avaliação você me explicou tudo com muita calma e me deixou super segura. Agora, vendo o resultado, fiquei muito feliz; ficou delicado e do jeitinho que eu queria."
+              loading="lazy"
+              decoding="async"
+            >
+            <img
+              class="testimonial-message"
+              src="assets/images/Depoimento-03.webp"
+              width="600"
+              height="506"
+              alt="Depoimento de paciente com foto: Estou passando só para dar um feedback e agradecer. Eu amei o seu atendimento e o procedimento ficou ótimo! Minha pele está maravilhosa."
+              loading="lazy"
+              decoding="async"
+            >
+          </div>
+
+          <a
+            class="button"
+            href="https://api.whatsapp.com/send/?phone=554688022986&amp;text=Ol%C3%A1%2C%20Dra.%20Renata!%20Conheci%20seu%20site%20e%20gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o."
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Agendar uma avaliação sem custo com a Dra. Renata pelo WhatsApp"
+          >
+            Quero agendar minha avaliação
+          </a>
+        </div>
+      </section>
+
+      <section class="care-process section" id="duvidas" aria-labelledby="titulo-duvidas">
+        <div class="container care-process__inner">
+          <header class="section-heading">
+            <p class="eyebrow eyebrow--light">Antes de decidir</p>
+            <h2 id="titulo-duvidas">Cuidado em cada etapa</h2>
+            <p>
+              Informação e confiança também fazem parte do processo. Tire suas principais dúvidas e
+              entenda como funciona meu atendimento.
+            </p>
+          </header>
+
+          <div class="accordion">
+            <details open>
+              <summary>Como funciona a avaliação?</summary>
+              <div class="accordion__content">
+                <p>
+                  Antes de qualquer procedimento, realizo uma avaliação inicial sem custo. Esse é o
+                  momento de entender o que incomoda você, avaliar sua pele e seus traços e conversar
+                  sobre as possibilidades para o seu caso.
+                </p>
+                <p>
+                  Também explico os cuidados, riscos e limites de cada tratamento. E, se um
+                  procedimento não for indicado para você, vou dizer isso com clareza.
+                </p>
+                <p>
+                  <a
+                    class="text-link"
+                    href="https://api.whatsapp.com/send/?phone=554688022986&amp;text=Ol%C3%A1%2C%20Dra.%20Renata!%20Conheci%20seu%20site%20e%20gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o."
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >Agende sua avaliação pelo WhatsApp.</a>
+                </p>
+              </div>
+            </details>
+
+            <details>
+              <summary>O que acontece depois do procedimento?</summary>
+              <div class="accordion__content">
+                <p>
+                  Meu cuidado continua após o atendimento. Acompanho sua evolução e permaneço
+                  disponível para orientar os cuidados necessários e esclarecer dúvidas durante o
+                  período de recuperação.
+                </p>
+              </div>
+            </details>
+
+            <details>
+              <summary>Para quem é esse cuidado?</summary>
+              <div class="accordion__content">
+                <p>
+                  Para quem busca cuidar da aparência sem deixar de se reconhecer. Para quem valoriza
+                  uma avaliação individual, resultados equilibrados e quer compreender as
+                  possibilidades antes de decidir por um procedimento.
+                </p>
+                <p>
+                  Também é para quem já teve uma experiência que não saiu como esperava e procura um
+                  atendimento cuidadoso para avaliar seu caso.
+                </p>
+              </div>
+            </details>
+
+            <details>
+              <summary>Já fiz um procedimento e não gostei. E agora?</summary>
+              <div class="accordion__content">
+                <p>
+                  O primeiro passo é entender o que foi realizado, o que está incomodando você e como
+                  está o seu caso atualmente.
+                </p>
+                <p>
+                  Durante a avaliação, você poderá me contar sua experiência e esclarecer suas
+                  dúvidas. A partir disso, avalio quais possibilidades existem e se há indicação para
+                  algum tipo de tratamento.
+                </p>
+                <p>
+                  Nenhuma correção é prometida antes de uma avaliação individual.
+                </p>
+                <p>
+                  <a
+                    class="text-link"
+                    href="https://api.whatsapp.com/send/?phone=554688022986&amp;text=Ol%C3%A1%2C%20Dra.%20Renata!%20Conheci%20seu%20site%20e%20gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o."
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >Se sentir segurança, estou disponível para conversar com você.</a>
+                </p>
+              </div>
+            </details>
+          </div>
+        </div>
+      </section>
+
+      <section class="final-cta section" aria-labelledby="titulo-contato">
+        <div class="container final-cta__inner">
+          <img
+            src="assets/brand/logo-icon.svg"
+            width="1120"
+            height="1054"
+            alt=""
+            aria-hidden="true"
+          >
+          <div>
+            <p class="eyebrow">Atendimento em Pato Branco</p>
+            <h2 id="titulo-contato">Seu cuidado pode começar por uma conversa.</h2>
+            <p>Segunda a sábado, das 08h às 18h, mediante agendamento e disponibilidade.</p>
+          </div>
+          <a
+            class="button button--final-cta"
+            href="https://api.whatsapp.com/send/?phone=554688022986&amp;text=Ol%C3%A1%2C%20Dra.%20Renata!%20Conheci%20seu%20site%20e%20gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o."
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Agendar avaliação sem custo pelo WhatsApp"
+          >
+            Agendar avaliação sem custo
+          </a>
+        </div>
+      </section>
     </main>
-</body>
 
+    <footer class="site-footer">
+      <div class="container site-footer__grid">
+        <div class="site-footer__brand">
+          <img
+            src="assets/brand/logo-wordmark.svg"
+            width="1464"
+            height="245"
+            alt="Dra. Renata dos Anjos — Biomédica Esteta"
+          >
+          <p>Harmonização facial com cuidado, critério e respeito aos seus traços.</p>
+        </div>
+
+        <div class="site-footer__block">
+          <p class="footer-label">Identificação profissional</p>
+          <p>Dra. Renata dos Anjos</p>
+          <p>Biomédica Esteta · CRBM-6 nº 9246</p>
+          <p>Habilitação em Biomedicina Estética</p>
+          <p>Pós-graduada em Cosmetologia e Estética</p>
+        </div>
+
+        <address class="site-footer__block">
+          <p class="footer-label">Atendimento</p>
+          <p>R. Dr. Francisco Beltrão, 129</p>
+          <p>Santa Terezinha · Pato Branco–PR</p>
+          <p>CEP 85501-190</p>
+          <p>Segunda a sábado · 08h às 18h</p>
+          <p>Mediante agendamento e disponibilidade</p>
+        </address>
+
+        <nav class="site-footer__block site-footer__links" aria-label="Links de contato e informações">
+          <p class="footer-label">Contato e informações</p>
+          <a
+            href="https://api.whatsapp.com/send/?phone=554688022986&amp;text=Ol%C3%A1%2C%20Dra.%20Renata!%20Conheci%20seu%20site%20e%20gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o."
+            target="_blank"
+            rel="noopener noreferrer"
+          >WhatsApp (46) 98802-2986</a>
+          <a href="https://www.instagram.com/drarenataanjos" target="_blank" rel="noopener noreferrer">
+            Instagram @drarenataanjos
+          </a>
+          <a href="https://maps.app.goo.gl/s66ffQioBQjr7ysE6" target="_blank" rel="noopener noreferrer">
+            Ver no Google Maps
+          </a>
+          <a href="politica-de-privacidade.html">Política de Privacidade</a>
+          <button class="cookie-preferences-link" type="button" data-cookie-preferences>
+            Preferências de cookies
+          </button>
+        </nav>
+      </div>
+
+      <div class="container site-footer__bottom">
+        <p>© <span data-current-year>2026</span> Dra. Renata dos Anjos. Todos os direitos reservados.</p>
+      </div>
+    </footer>
+
+    <section
+      class="cookie-consent"
+      role="dialog"
+      aria-labelledby="cookie-consent-title"
+      aria-describedby="cookie-consent-description"
+      data-cookie-consent
+      hidden
+    >
+      <button
+        class="cookie-consent__close"
+        type="button"
+        aria-label="Recusar cookies de análise e fechar"
+        data-cookie-reject
+      ><span aria-hidden="true">×</span></button>
+      <h2 id="cookie-consent-title">Sua privacidade</h2>
+      <p id="cookie-consent-description">
+        Com sua autorização, usamos cookies para medir acessos, cliques e interações. Você
+        pode aceitar ou recusar sem afetar o uso do site.
+        <a href="politica-de-privacidade.html#cookies-analytics">Saiba mais</a>.
+      </p>
+      <div class="cookie-consent__actions">
+        <button type="button" data-cookie-accept>Aceitar</button>
+        <button type="button" data-cookie-reject>Recusar</button>
+      </div>
+    </section>
+  </body>
 </html>
