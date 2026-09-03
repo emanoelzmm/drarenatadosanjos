@@ -370,6 +370,17 @@ section[id] {
   transform: rotate(-1deg);
 }
 
+/* Quebras de linha forçadas para mobile */
+.hero__mobile-break {
+  display: none;
+}
+
+@media (max-width: 43.6875rem) {
+  .hero__mobile-break {
+    display: block;
+  }
+}
+
 .hero .hero__button {
   min-width: 210px;
   min-height: 52px;
