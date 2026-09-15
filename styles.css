@@ -581,6 +581,10 @@ section[id] {
     var(--cream);
 }
 
+.treatment__subsection {
+  margin-top: clamp(4rem, 10vw, 6.5rem);
+}
+
 .treatment--dark {
   color: var(--white);
   background:
