@@ -129,6 +129,11 @@ section[id] {
   scroll-margin-top: 1rem;
 }
 
+/* Faz a âncora do procedimento chegar ao título, descontando o espaço da seção. */
+.treatment.section[id] {
+  scroll-margin-top: calc(0.5rem - var(--section-space));
+}
+
 .treatment .section-heading h2 {
   scroll-margin-top: 0.5rem;
 }
