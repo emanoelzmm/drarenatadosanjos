@@ -595,35 +595,123 @@
               </p>
             </header>
 
-            <div class="comparison" role="group" aria-label="Comparação do resultado de perfiloplastia">
-              <figure class="result-card">
-                <img
-                  src="assets/images/Perfiloplastia-antes.webp"
-                  width="1000"
-                  height="1000"
-                  alt="Perfil lateral de uma paciente antes da perfiloplastia, mostrando nariz, lábios e queixo"
-                  loading="lazy"
-                  decoding="async"
+            <div
+              class="case-carousel"
+              role="region"
+              aria-roledescription="carrossel"
+              aria-label="Resultados de perfiloplastia"
+              data-case-carousel
+            >
+              <div class="case-carousel__viewport" id="perfiloplastia-casos" data-case-viewport>
+                <!-- Cada slide reúne o antes e o depois de um único caso. -->
+                <div
+                  class="comparison case-carousel__slide"
+                  role="group"
+                  aria-roledescription="slide"
+                  aria-label="Caso 1 de 2"
+                  data-case-slide
                 >
-                <figcaption class="result-card__label">Antes</figcaption>
-              </figure>
+                  <figure class="result-card">
+                    <img
+                      src="assets/images/Perfiloplastia-antes.webp"
+                      width="1000"
+                      height="1000"
+                      alt="Perfil lateral de uma paciente antes da perfiloplastia, mostrando nariz, lábios e queixo"
+                      loading="lazy"
+                      decoding="async"
+                      draggable="false"
+                    >
+                    <figcaption class="result-card__label">Antes</figcaption>
+                  </figure>
 
-              <figure class="result-card">
-                <img
-                  src="assets/images/Perfiloplastia-depois.webp"
-                  width="1000"
-                  height="1000"
-                  alt="Perfil lateral da mesma paciente depois da perfiloplastia, mostrando nariz, lábios e queixo"
-                  loading="lazy"
-                  decoding="async"
+                  <figure class="result-card">
+                    <img
+                      src="assets/images/Perfiloplastia-depois.webp"
+                      width="1000"
+                      height="1000"
+                      alt="Perfil lateral da mesma paciente depois da perfiloplastia, mostrando nariz, lábios e queixo"
+                      loading="lazy"
+                      decoding="async"
+                      draggable="false"
+                    >
+                    <figcaption class="result-card__label">Depois</figcaption>
+                  </figure>
+                </div>
+
+                <div
+                  class="comparison case-carousel__slide"
+                  role="group"
+                  aria-roledescription="slide"
+                  aria-label="Caso 2 de 2"
+                  data-case-slide
+                  hidden
                 >
-                <figcaption class="result-card__label">Depois</figcaption>
-              </figure>
+                  <figure class="result-card">
+                    <img
+                      src="assets/images/Perfiloplastia-2-antes.webp"
+                      width="1000"
+                      height="1000"
+                      alt="Perfil lateral de uma paciente antes da perfiloplastia, mostrando nariz, lábios e queixo"
+                      loading="lazy"
+                      decoding="async"
+                      draggable="false"
+                    >
+                    <figcaption class="result-card__label">Antes</figcaption>
+                  </figure>
+
+                  <figure class="result-card">
+                    <img
+                      src="assets/images/Perfiloplastia-2-depois.webp"
+                      width="1000"
+                      height="1000"
+                      alt="Perfil lateral da mesma paciente depois da perfiloplastia, mostrando nariz, lábios e queixo"
+                      loading="lazy"
+                      decoding="async"
+                      draggable="false"
+                    >
+                    <figcaption class="result-card__label">Depois</figcaption>
+                  </figure>
+                </div>
+
+              </div>
+
+              <p class="provisional-note">
+                *Imagens reais com autorização para divulgação.
+              </p>
+
+              <div class="case-carousel__controls" data-case-controls hidden>
+                <button
+                  class="case-carousel__arrow"
+                  type="button"
+                  aria-label="Ver caso anterior de perfiloplastia"
+                  aria-controls="perfiloplastia-casos"
+                  data-case-previous
+                >
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                    <path d="m14 6-6 6 6 6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" />
+                  </svg>
+                </button>
+
+                <div class="case-carousel__pagination">
+                  <p class="case-carousel__counter" aria-live="polite" aria-atomic="true" data-case-counter>
+                    Caso 01 de 02
+                  </p>
+                  <div class="case-carousel__dots" role="group" aria-label="Escolher caso de perfiloplastia" data-case-dots></div>
+                </div>
+
+                <button
+                  class="case-carousel__arrow"
+                  type="button"
+                  aria-label="Ver próximo caso de perfiloplastia"
+                  aria-controls="perfiloplastia-casos"
+                  data-case-next
+                >
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                    <path d="m10 6 6 6-6 6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" />
+                  </svg>
+                </button>
+              </div>
             </div>
-
-            <p class="provisional-note">
-              *Imagens reais com autorização para divulgação.
-            </p>
 
             <a
               class="button"

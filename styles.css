@@ -611,6 +611,117 @@ section[id] {
   gap: 1.25rem;
 }
 
+/* Cada caso avança com as duas fotos, mantendo o formato da comparação. */
+.case-carousel {
+  --carousel-control-size: 3rem;
+  margin-bottom: 2rem;
+}
+
+.case-carousel .provisional-note {
+  margin-bottom: 0;
+}
+
+.case-carousel__viewport {
+  cursor: grab;
+  touch-action: pan-y pinch-zoom;
+  user-select: none;
+}
+
+.case-carousel__viewport:active {
+  cursor: grabbing;
+}
+
+.case-carousel__slide[hidden],
+.case-carousel__controls[hidden] {
+  display: none;
+}
+
+.case-carousel__controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.25rem;
+  margin-top: 1.5rem;
+}
+
+.case-carousel__arrow {
+  display: grid;
+  flex: 0 0 var(--carousel-control-size);
+  place-items: center;
+  width: var(--carousel-control-size);
+  height: var(--carousel-control-size);
+  padding: 0;
+  border: 1px solid var(--sand-deep);
+  border-radius: 50%;
+  color: var(--brown-deep);
+  background: var(--cream);
+  cursor: pointer;
+  transition: background-color 180ms ease, border-color 180ms ease;
+}
+
+.case-carousel__arrow:hover {
+  border-color: var(--brown);
+  background: var(--sand);
+}
+
+.case-carousel__arrow:active {
+  background: var(--sand-deep);
+}
+
+.case-carousel__pagination {
+  display: grid;
+  justify-items: center;
+  min-width: 7rem;
+}
+
+.case-carousel__counter {
+  margin: 0;
+  color: var(--brown-deep);
+  font-size: 0.8rem;
+  font-weight: 500;
+  font-variant-numeric: tabular-nums;
+}
+
+.case-carousel__dots {
+  display: flex;
+  justify-content: center;
+}
+
+.case-carousel__dot {
+  display: grid;
+  place-items: center;
+  width: 2rem;
+  height: 2rem;
+  padding: 0;
+  border: 0;
+  border-radius: 50%;
+  background: transparent;
+  cursor: pointer;
+}
+
+.case-carousel__dot::before {
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 999px;
+  background: var(--brown);
+  content: "";
+  transition: width 180ms ease, background-color 180ms ease;
+}
+
+.case-carousel__dot:hover::before {
+  background: var(--brown-deep);
+}
+
+.case-carousel__dot[aria-current="true"]::before {
+  width: 1.25rem;
+  background: var(--brown-deep);
+}
+
+.case-carousel:focus-visible,
+.case-carousel button:focus-visible {
+  outline-color: var(--brown-deep);
+}
+
 .result-card,
 .feature-media {
   position: relative;
